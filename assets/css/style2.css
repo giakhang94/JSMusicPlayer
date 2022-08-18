@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --mainColor: #F03377;
+    --titleColor: #363245;
+    --dscColor:  #78739D;   
+}
+.nav__item.active i {
+    color: var(--mainColor);
+}
+.active {
+    color: var(--mainColor);
+}
+.playlist__item.active {
+    color: white;
+    font-weight: 600;
+    background-color: var(--mainColor);
+}
+.playlist__item.active .item__body i {
+    font-weight: 300;
+}
+/* xong phần chung */
+.wrapper {
+    margin: 24px auto;
+    padding: 24px;
+    height: 400px;
+    width: 800px;
+    display: flex;
+    border-radius: 10px;
+}
+.dashboard i {
+    font-size: 12px;
+    color: var(--mainColor);
+}
+.dashboard__songName {
+    margin-top: 8px;
+}
+.player {
+    padding: 12px;
+    width: 300px;
+    background-color:rgba(0,0,0,0.1);
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.CD {
+    text-align: center;
+    width: 100%;
+}
+.CD__thumb {
+    margin: 12px auto;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+.CD__thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.controller .nav {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .nav__item {
+    padding: 18px;
+    float: left;
+    cursor: pointer;
+    color: var(--dscColor);
+}
+.nav__play .play-i {
+    font-size: 25px;
+}
+.nav__play .playing-i {
+    display: none;
+    font-size: 25px;
+}
+/* xử lý playlist */
+
+.playlist {
+    width: 500px;
+    height: auto;
+    /* background-color: red; */
+    padding: 0 12px;
+    overflow: auto;
+    border-top-right-radius:5px;
+    border-bottom-right-radius: 5px;
+}
+.playlist__item {
+    margin-bottom: 8px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+}
+.item__avt {
+    width: 80px;
+    height: 80px;
+}
+.item__avt img {
+    width: 100%;
+    border-radius: 5px;
+}
+.item__body {
+    flex: 1;
+    margin-left: 36px;
+    line-height: 1.5;
+}
+.item__option {
+    width: 16px;
+}
+.volume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.volume i {
+    color: var(--titleColor);
+    margin-right: 8px;
+    margin-top: 8px;
+}
+#volume {
+    width: 50%;
+    margin-top: 8px;
+}
+/* xử lý cho input type = range  */
+input[type=range]{
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: var(--dscColor);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--mainColor);
+    margin-top: -6px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--dscColor)
+}
+/*xử lý scrollbar*/
+.playlist::-webkit-scrollbar {
+    width: 8px;           
+}
+  
+.playlist::-webkit-scrollbar-track {
+    border-radius: 5px;    /* width of the entire scrollbar */
+    background: var(--dscColor);        /* color of the tracking area */
+}
+  
+.playlist::-webkit-scrollbar-thumb {
+    background-color: var(--mainColor);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--mainColor);  /* creates padding around scroll thumb */
+}

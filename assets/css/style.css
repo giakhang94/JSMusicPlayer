@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --mainColor: #F03377;
+    --titleColor: #363245;
+    --dscColor:  #78739D;   
+}
+.active {
+    color: var(--mainColor);
+}
+.active1 {
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: 600;
+}
+.active1 i{
+    color: white;
+}
+.active1 p {
+    color: white;
+}
+.active i {
+    color: var(--mainColor);
+}
+@keyframes CD-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* xong phần chung */
+.player {
+    position: relative;
+    margin:  auto;
+    max-width: 350px;
+}
+.dashboard {
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    z-index: 9;
+    background-color: #FFF;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.3);
+}
+.dashboard .title {
+    color: var(--mainColor);
+    font-size: 12px;
+}
+.dashboard__song {
+    margin-bottom: 24px;
+    margin-top: 2px;
+}
+.CD {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+
+}
+.CD__thumb img {
+    border-radius: 50%;
+    width: 100%
+}
+.controller {
+    text-align: center;
+}
+.controller .controller__nav {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.controller__nav .nav__item {
+    color: var(--dscColor);
+    font-size: 16px;
+    padding: 25px 28px;
+    cursor: pointer;
+}
+#progress {
+    width: 100%;
+    margin: 0 0 32 0;
+}
+.playlist .playlist__thumb img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.nav__play {
+    background-color: var(--mainColor);
+    border-radius: 50%;
+    padding: 15px 20px !important;
+}
+.nav__play i {
+    font-size: 24px;
+    color: #FFF;
+    padding: 0;
+}
+.nav__play >.playing-i {
+    display: none;
+}
+.playing>.play-i {
+    display: none;
+}
+.nav__play.playing>.playing-i {
+    display: block;
+}
+.playlist {
+    margin-top: 280px;
+}
+.playlist .playlist__item{
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 15px 3px rgba(0,0,0,0.2);
+    padding: 4px 4px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    margin-left: 0px;
+    width: 98%;
+    cursor: pointer;
+}
+.playlist__thumb {
+    width: 50px;
+}
+.playlist__option {
+    width: 16px;
+}
+.playlist__song {
+    flex-grow: 1;
+    margin-left: 25px;
+}
+.song__artist{
+    color: var(--dscColor);
+    font-size: 12px;
+}
+.playlist__option {
+    color: var(--dscColor)
+}
+/* thay đổi màu cho input range */
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 90%;
+    height: 5px;
+    background: var(--dscColor);
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--mainColor);
+    margin-top: -6px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--dscColor);
+}

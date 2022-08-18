@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="player">
+            <div class="dashboard">
+                <i>Welcome</i>
+                <h2 class="dashboard__songName">
+                    ali ho ho
+                </h2>
+            </div>
+            <div class="CD">
+                <div class="CD__thumb">
+                    <img src="./assets/img/song1.jpg" alt="" class="thumb__img">
+                </div>
+            </div>
+            <div class="controller">
+                <ul class="nav">
+                    <div class="nav__item nav__replay">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </div>
+                    <div class="nav__item nav__prev">
+                        <i class="fa-solid fa-backward"></i>
+                    </div>
+                    <div class="nav__item nav__play">
+                        <i class="fa-solid fa-play play-i"></i>
+                        <i class="fa-solid fa-pause playing-i"></i>
+                    </div>
+                    <div class="nav__item nav__next">
+                        <i class="fa-solid fa-forward"></i>
+                    </div>
+                    <div class="nav__item nav__shuffle">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                </ul>
+                <input type="range" id ="progress" step=0.1 min=1 max=100 value = 0>
+                <div class="volume">
+                    <i class="fa-solid fa-volume-high volume__icon" id ="volume__icon"></i><input type="range" id ="volume" step=0.05 min=0 max=1 value = 0.5s>
+                </div>
+                <audio src="" id = 'audio'></audio>
+            </div>
+        </div>
+        <div class="playlist">
+            <div class="playlis__item">
+                <div class="item__avt">
+                    <img src="./assets/img/song1.jpg" alt="">
+                </div>
+                <div class="item__body">
+                    <h3 class="item__song">Nàng Thơ</h3>
+                    <i class="item__singer">Hoàng Dũng</i>
+                </div>
+                <div class="item__option">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main2.js"></script>
+</body>
+</html>
